@@ -1,0 +1,26 @@
+[
+    {
+        "id": "S001",
+        "name": "Chạy bộ",
+        "type": "cardio",
+        "met": 8.0
+    },
+    {
+        "id": "S002",
+        "name": "Đạp xe",
+        "type": "cardio",
+        "met": 7.5
+    },
+    {
+        "id": "S003",
+        "name": "Cử tạ",
+        "type": "strength",
+        "met": 5.0
+    },
+    {
+        "id": "S004",
+        "name": "Yoga",
+        "type": "flexibility",
+        "met": 2.5
+    }
+]
