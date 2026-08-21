@@ -69,7 +69,7 @@ class LoginWindow(tk.Tk):
 
         hint = tk.Label(
             container,
-            text="(Tài khoản admin mặc định: admin / admin123)",
+            text="",
             bg=COLOR_BACKGROUND,
             fg="gray",
             font=("Segoe UI", 8),
