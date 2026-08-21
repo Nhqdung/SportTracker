@@ -1,0 +1,11 @@
+[
+    {
+        "id": "U001",
+        "username": "admin",
+        "password_hash": "test123",
+        "full_name": "Administrator",
+        "email": "admin@example.com",
+        "phone": "0901234567",
+        "role": "admin"
+    }
+]
