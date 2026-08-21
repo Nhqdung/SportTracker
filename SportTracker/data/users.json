@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
     {
         "id": "U001",
@@ -8,4 +9,16 @@
         "phone": "0901234567",
         "role": "admin"
     }
+=======
+[
+    {
+        "id": "U001",
+        "username": "admin",
+        "password_hash": "test123",
+        "full_name": "Administrator",
+        "email": "admin@example.com",
+        "phone": "0901234567",
+        "role": "admin"
+    }
+>>>>>>> 58a8b8e94acf496039f1249903decba46af786fd
 ]
