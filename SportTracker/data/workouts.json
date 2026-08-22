@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "id": "W001",
+        "user_id": "U002",
+        "sport_id": "S001",
+        "date": "22/08/2026",
+        "duration_minutes": 22.0,
+        "calories_burned": 64.53,
+        "note": ""
+    }
+]

@@ -9,6 +9,7 @@ from services.auth_service import AuthService
 from services.workout_service import WorkoutService
 from services.goal_service import GoalService
 from services.statistic_service import StatisticService
+from services.body_metric_service import BodyMetricService
 
 from utils.constants import (
     USERS_FILE,
@@ -39,3 +40,4 @@ class AppContext:
         self.statistic_service = StatisticService(
             self.workout_service, self.goal_service
         )
+        self.body_metric_service = BodyMetricService(self.body_metric_storage)

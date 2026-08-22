@@ -8,6 +8,11 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 
 from gui.dashboard import DashboardView
+from gui.workout_view import WorkoutView
+from gui.goal_view import GoalView
+from gui.body_metric_view import BodyMetricView
+from gui.exercise_view import ExerciseView
+from gui.admin_view import AdminView
 from utils.constants import COLOR_PRIMARY, COLOR_BACKGROUND
 
 
@@ -50,27 +55,25 @@ class MainWindow(tk.Tk):
         dashboard_tab = DashboardView(notebook, self._user, self._context)
         notebook.add(dashboard_tab, text="Tổng quan")
 
-        self._add_placeholder_tabs(notebook)
+        workout_tab = WorkoutView(notebook, self._user, self._context)
+        notebook.add(workout_tab, text="Buổi tập")
+
+        goal_tab = GoalView(notebook, self._user, self._context)
+        notebook.add(goal_tab, text="Mục tiêu")
+
+        body_tab = BodyMetricView(notebook, self._user, self._context)
+        notebook.add(body_tab, text="Chỉ số cơ thể")
+
+        exercise_tab = ExerciseView(notebook, self._user, self._context)
+        notebook.add(exercise_tab, text="Bài tập")
 
         if self._user.is_admin():
-            admin_tab = self._placeholder_tab(notebook, "Quản trị người dùng")
+            admin_tab = AdminView(notebook, self._user, self._context)
             notebook.add(admin_tab, text="Quản trị")
 
-    def _add_placeholder_tabs(self, notebook):
-        """Các tab nghiệp vụ sẽ được hoàn thiện ở các bước tiếp theo."""
-
-        tab_titles = [
-            ("Buổi tập", "Quản lý buổi tập (CRUD)"),
-            ("Mục tiêu", "Quản lý mục tiêu (CRUD)"),
-            ("Chỉ số cơ thể", "Theo dõi chỉ số cơ thể (CRUD)"),
-            ("Bài tập", "Thư viện bài tập (từ API)"),
-        ]
-
-        for tab_text, title in tab_titles:
-            frame = self._placeholder_tab(notebook, title)
-            notebook.add(frame, text=tab_text)
-
     def _placeholder_tab(self, parent, title):
+        """Giữ lại để dự phòng cho các tab chưa hoàn thiện (hiện không còn dùng)."""
+
         frame = tk.Frame(parent, bg="white")
 
         tk.Label(
